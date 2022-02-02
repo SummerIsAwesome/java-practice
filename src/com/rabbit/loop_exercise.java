@@ -21,9 +21,10 @@ public class loop_exercise {
             // another way of writing it___-- if (a>max) max = a;
             a = sc.nextInt();
         }
+        strict_divisor();
 
-        System.out.println("The max number entered is " + max);
-        System.out.println("The min number entered is " +min);
+      //  System.out.println("The max number entered is " + max);
+       // System.out.println("The min number entered is " +min);
     }
 
 
@@ -37,7 +38,7 @@ public class loop_exercise {
 
 
 
-    public static void strict_divisor(String[] args) {
+    public static void strict_divisor() {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         double b =a/2;
@@ -100,13 +101,37 @@ public class loop_exercise {
 
 
     //Display the nth fibonacci number
-    public static void main(String[] args) {
+    public static void fibonacci(String[] args) {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int b = 1;
-        int c = 0;
-        while(true){
-             c = b + c;
+        int c = 1;
+        int i=1 ;
+        while(i < a){
+            int reasult = b +c;
+            b=c;
+            c=reasult;
+            i++;
+            System.out.println(reasult);
         }
+    }
+
+
+
+
+
+    //show a star pattern
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+       for (int i =1; i <= a ;i++){
+           for (int j = 1; j<=i; j++){
+               System.out.print("*");
+           }
+           System.out.println();
+
+       }
+
+
     }
 }
